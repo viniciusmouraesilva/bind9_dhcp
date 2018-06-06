@@ -1,0 +1,27 @@
+view "internal" {
+	
+	match-clients {
+		localhost;
+		192.168.100.0/24;
+	};
+
+	zone "empresa.corp" {
+		type master;
+		file "/etc/bind/empresa.corp.lan";
+		allow-update { none; };
+	};
+	
+	zone "192.168.100.in-addr.arpa" {
+		type master;
+		file "/etc/bind/192.168.100.db";
+		allow-update { none; };
+	};
+
+	zone "minhaempresa.com.br" {
+		type master;
+		file "/etc/bind/minhaempresa.com.br.lan";
+		allow-update { none; };
+	};
+	
+	include "/etc/bind/named.conf.default-zones";
+};

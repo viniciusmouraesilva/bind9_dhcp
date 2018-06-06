@@ -1,0 +1,15 @@
+$TTL 24h
+@	IN	SOA	dns.empresa.corp. root.empresa.corp. (
+	1		; Serial
+	12h		; Refresh
+	15m		; Retry
+	3w		; Expire
+	2h		; Mininum TTL
+)
+
+@	IN	NS	dns.empresa.corp.
+10	IN	PTR	dns.empresa.corp.
+
+11	IN	PTR	www.empresa.corp.
+10	IN	PTR	servidor.empresa.corp.
+11	IN	PTR	servidorweb.empresa.corp.
